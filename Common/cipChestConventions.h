@@ -346,31 +346,31 @@ public:
 
   /** Returns true if the passed string name is among the allowed body composition
    *  phenotype names and returns false otherwise */
-  bool IsBodyCompositionPhenotypeName( std::string ) const;
+  bool IsBodyCompositionPhenotypeName( std::string pheno) const;
 
   /** Returns true if the passed string name is among the allowed parenchyma
    *  phenotype names and returns false otherwise */
-  bool IsParenchymaPhenotypeName( std::string ) const;
+  bool IsParenchymaPhenotypeName( std::string pheno) const;
   
   /** Returns true if the passed string name is among the allowed histogram
    *  phenotype names and returns false otherwise */
-  bool IsHistogramPhenotypeName( std::string ) const;
+  bool IsHistogramPhenotypeName( std::string pheno) const;
 
   /** Returns true if the passed string name is among the allowed pulmonary vasculature
    *  phenotype names and returns false otherwise */
-  bool IsPulmonaryVasculaturePhenotypeName( std::string ) const;
+  bool IsPulmonaryVasculaturePhenotypeName( std::string pheno) const;
   
   /** Returns true if the passed string name is among the allowed
    *  phenotype names and returns false otherwise */
-  bool IsPhenotypeName( std::string ) const;
+  bool IsPhenotypeName( std::string pheno) const;
 
   /** Returns true if the passed string name is among the enumerated chest
    *  types and returns false otherwise */
-  bool IsChestType( std::string ) const;
+  bool IsChestType( std::string chestType) const;
 
   /** Returns true if the passed string name is among the enumerated chest
    *  regions and returns false otherwise */
-  bool IsChestRegion( std::string ) const;
+  bool IsChestRegion( std::string chestRegion) const;
 
 public:
   std::map< unsigned char, unsigned char >  ChestRegionHierarchyMap;

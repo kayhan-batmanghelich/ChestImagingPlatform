@@ -247,9 +247,10 @@ if(BUILD_SANDBOX)
   SUBDIRS (Sandbox)
 endif(BUILD_SANDBOX)
 
-if ( CIP_BUILD_TESTING_PYTHON )
- SUBDIRS ( cip_python )
-endif( CIP_BUILD_TESTING_PYTHON ) 
+SET(BUILD_CIP_PYTHON ON CACHE BOOL "BUILD_CIP_PYTHON")
+if (BUILD_CIP_PYTHON)
+  SUBDIRS ( cip_python )
+endif()
 
 #-----------------------------------------------------------------------------
 # CMake Function(s) and Macro(s)
@@ -316,4 +317,3 @@ if(CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64")
 endif()
 
 export( PACKAGE CIP )
-
