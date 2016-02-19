@@ -117,6 +117,9 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${ITK_REQUIRED_LINK_FLAGS}
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${ITK_REQUIRED_LINK_FLAGS}")
 set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} ${ITK_REQUIRED_LINK_FLAGS}")
 
+## ITK ERROR
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libstdc++ -std=c++11")
+  #-stdlib=libstdc++ -mmacosx-version-min=10.6
 
 #-----------------------------------------------------------------------------
 # Add needed flag for gnu on linux like enviroments to build static common libs
@@ -155,9 +158,11 @@ find_package(Git REQUIRED)
 
 set(ep_common_c_flags "${CMAKE_C_FLAGS_INIT} ${ADDITIONAL_C_FLAGS}")
 set(ep_common_cxx_flags "${CMAKE_CXX_FLAGS_INIT} ${ADDITIONAL_CXX_FLAGS}")
-if (APPLE)
-  set(ep_common_cxx_flags "${ep_common_cxx_flags} -stdlib=libstdc++ -mmacosx-version-min=10.6")
-endif()
+#if (APPLE)
+#   set(ep_common_cxx_flags "${ep_common_cxx_flags} -stdlib=libstdc++ -mmacosx-version-min=10.6")
+  #SET (CMAKE_OSX_DEPLOYMENT_TARGET "10.11")
+  #SET (CMAKE_OSX_SYSROOT "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk")  
+#endif()
 
 include(ExternalProject)
 include(ExternalProjectDependency)
