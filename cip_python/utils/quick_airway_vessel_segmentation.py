@@ -61,7 +61,8 @@ class quickAirwayVesselSegmentator:
             vessels / airways.   
         """
 
-        #Check required tools path enviroment variables for tools path        
+        #Check required tools path enviroment variables for tools path  
+        # Kayhan: I recommend reading it from the enviroment and not hard-coding it
         os.environ['CIP_PATH']=os.path.expanduser('/Users/rolaharmouche/ChestImagingPlatform-build/CIP-build/bin')
         os.environ['TEEM_PATH']=os.path.expanduser('/Users/rolaharmouche/teem-code/teem-build/bin')
         os.environ['ITKTOOLS_PATH']=os.path.expanduser('/Users/rolaharmouche/Downloads/ITKTools/build/bin')
